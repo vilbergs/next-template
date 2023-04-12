@@ -1,4 +1,4 @@
-import { render, expect, test } from '@/test/component/utils'
+import { render, expect, test } from '@/test/unit/utils'
 
 import Button from '@/components/atoms/Button'
 
