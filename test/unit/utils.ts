@@ -5,7 +5,7 @@ import { PropsWithChildren } from 'react'
 export * from '@testing-library/react'
 export * from 'vitest'
 
-function Providers({ children }: PropsWithChildren<unknown>) {
+function Providers({ children }: any) {
   return children
 }
 
