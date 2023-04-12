@@ -36,3 +36,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 🧪 Testing
+
+### Testing Libraries used
+
+#### vitest
+
+`vitest` is a lightweight and simple testing framework for JavaScript projects. It provides a minimalistic API for defining tests and assertions, and it can be used with a variety of testing libraries and tools.
+
+#### @testing-library/react
+
+`@testing-library/react` is a testing utility for React components that makes it easy to test the behavior and appearance of your components in a way that closely resembles how your users will interact with them.
+
+#### playwright
+
+`playwright` is a Node.js library for automating web browsers, including Chromium, Firefox, and WebKit. It provides a high-level API for interacting with web pages, including clicking buttons, filling in forms, and taking screenshots.
+
+### Running Tests
+
+`npm run test` - Runs both unit tests and e2e tests
+`npm run test:unit` - Runs unit tests (Vitest / Testing Library)
+`npm run test:e2e` - Runs e2e tests (PLaywright)
