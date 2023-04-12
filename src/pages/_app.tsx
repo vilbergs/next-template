@@ -6,7 +6,9 @@ import { NextIntlProvider } from 'next-intl'
 export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <NextIntlProvider messages={pageProps.messages}>
+        <Component {...pageProps} />
+      </NextIntlProvider>
     </SessionProvider>
   )
 }

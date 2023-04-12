@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { getCsrfToken } from 'next-auth/react'
+import { getMessages } from '@/i18n'
+import { useTranslations } from 'next-intl'
 
 export default function Home(props: any) {
+  const t = useTranslations('Index')
+
   return (
     <>
       <Head>
@@ -12,14 +16,16 @@ export default function Home(props: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Next.js Template - {props.locale}</h1>
+        <h1>
+          {t('title')} - {props.locale}
+        </h1>
 
         <div className="flex flex-col spacy-y-3">
-          <Link href="/" locale="en-US">
+          <Link href="/" locale="en">
             US
           </Link>
-          <Link href="/" locale="fr">
-            FR
+          <Link href="/" locale="sv">
+            SV
           </Link>
 
           <Link href="/dashboard">Dashboard</Link>
@@ -42,6 +48,7 @@ export async function getServerSideProps({ locale, req }: any) {
     props: {
       locale,
       token,
+      messages: await getMessages(locale, ['Index', 'Components']),
     },
   }
 }
