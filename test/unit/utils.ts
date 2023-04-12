@@ -6,7 +6,7 @@ export * from '@testing-library/react'
 export * from 'vitest'
 
 function Providers({ children }: PropsWithChildren<unknown>) {
-  return <>{children}</>
+  return children
 }
 
 function renderWithDefaults(ui: React.ReactElement, options?: Omit<RenderOptions, 'queries'>) {
